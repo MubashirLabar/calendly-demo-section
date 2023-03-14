@@ -101,7 +101,7 @@
 
   .button,
   .button-primary {
-    @apply w-full flex flex-row justify-center items-center relative
+    @apply flex flex-row justify-center items-center relative
     min-h-[49px] py-[10px] px-[18px] rounded-[8px]
     border-2 border-transparent bg-primary-700
     font-["Gilroy-SemiBold"]
@@ -111,7 +111,7 @@
   }
 
   .button-primary-hollow {
-    @apply w-full flex flex-row justify-center items-center relative
+    @apply flex flex-row justify-center items-center relative
     min-h-[49px] py-[10px] px-[18px] rounded-[8px]
     border-2 border-primary-700 bg-transparent
     font-["Gilroy-SemiBold"]

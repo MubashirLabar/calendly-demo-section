@@ -14,8 +14,10 @@ const Hero = () => {
             admissions interviews and tours for students, faculty, and staff.
           </p>
           <div className="w-full flex flex-col sm:flex-row items-center gap-4 mb-6 sm:mb-0">
-            <button className="button-primary sm:my-2">Sign up for free</button>
-            <button className="button-primary-hollow sm:my-2">
+            <button className="w-full sm:w-[auto] button-primary sm:my-2">
+              Sign up for free
+            </button>
+            <button className="w-full sm:w-[auto] button-primary-hollow sm:my-2">
               Talk to sales
             </button>
           </div>
