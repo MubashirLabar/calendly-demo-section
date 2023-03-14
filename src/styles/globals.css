@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Black.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("/fonts/Gilroy-Regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("/fonts/Gilroy-Medium.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("/fonts/Gilroy-SemiBold.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("/fonts/Gilroy-Bold.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular";
+  src: url("/fonts/Circular.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --color-primary-700: 0, 107, 255;
+    --color-primary-500: 26, 87, 236;
+
+    --color-service-text-700: 11, 53, 88;
+    --color-service-text-500: 71, 103, 136;
+  }
+
+  body {
+    @apply font-["Gilroy-Regular"];
+  }
+
+  *,
+  ::before,
+  ::after {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    user-select: none;
+  }
+}
+
+@layer components {
+  * {
+    @apply scroll-py-[48px];
+  }
+}
+
+@layer utilities {
+  .margins {
+    @apply px-[24px] lg:px-[40px];
+  }
+
+  .animation {
+    @apply duration-300 transition-all;
+  }
+
+  .font-regular {
+    @apply font-["Gilroy-Regular"];
+  }
+
+  .font-medium {
+    @apply font-["Gilroy-Medium"];
+  }
+
+  .font-semiBold {
+    @apply font-["Gilroy-SemiBold"];
+  }
+
+  .font-bold {
+    @apply font-["Gilroy-Bold"];
+  }
+
+  .font-gilroy {
+    @apply font-["Gilroy"];
+  }
+
+  .font-circular {
+    @apply font-["Circular"];
+  }
+
+  .button,
+  .button-primary {
+    @apply w-full flex flex-row justify-center items-center relative
+    min-h-[49px] py-[10px] px-[18px] rounded-[8px]
+    border-2 border-transparent bg-primary-700
+    font-["Gilroy-SemiBold"]
+    text-[1.125rem] text-white text-center
+    leading-[1.6] cursor-pointer
+    duration-300 transition-all;
+  }
+
+  .button-primary-hollow {
+    @apply w-full flex flex-row justify-center items-center relative
+    min-h-[49px] py-[10px] px-[18px] rounded-[8px]
+    border-2 border-primary-700 bg-transparent
+    font-["Gilroy-SemiBold"]
+    text-[1.125rem] text-primary-700 text-center
+    leading-[1.6] cursor-pointer
+    duration-300 transition-all;
+  }
+
+  .hideScroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hideScroll {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
