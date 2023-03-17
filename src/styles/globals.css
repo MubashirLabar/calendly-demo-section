@@ -45,6 +45,8 @@
 
     --color-service-text-700: 11, 53, 88;
     --color-service-text-500: 71, 103, 136;
+
+    --color-border-700: 231, 237, 246;
   }
 
   body {
@@ -87,7 +89,7 @@
     @apply font-["Gilroy-SemiBold"];
   }
 
-  .font-bold {
+  .font-Bold {
     @apply font-["Gilroy-Bold"];
   }
 
@@ -103,7 +105,7 @@
   .button-primary {
     @apply flex flex-row justify-center items-center relative
     min-h-[49px] py-[10px] px-[18px] rounded-[8px]
-    border-2 border-transparent bg-primary-700
+    border-2 border-transparent bg-primary-700 hover:bg-primary-500
     font-["Gilroy-SemiBold"]
     text-[1.125rem] text-white text-center
     leading-[1.6] cursor-pointer
@@ -127,5 +129,24 @@
   .hideScroll {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  .logo-grids {
+    @apply w-full m-auto h-auto grid grid-cols-3 justify-center items-stretch gap-4 lg:gap-8 z-10;
+    grid-template-columns: repeat(3, minmax(267px, min(30%, 370px)));
+  }
+
+  /* Large Screen */
+  @media screen and (max-width: 1200px) {
+    .logo-grids {
+      grid-template-columns: repeat(2, minmax(200px, 370px));
+    }
+  }
+
+  /* Mobile Screens */
+  @media screen and (max-width: 640px) {
+    .logo-grids {
+      grid-template-columns: 1fr;
+    }
   }
 }

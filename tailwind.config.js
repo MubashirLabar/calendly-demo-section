@@ -18,8 +18,8 @@ module.exports = {
         // => @media (min-width: 360px) { ... }
         sm: "640px",
         // => @media (min-width: 640px) { ... }
-        md: "768px",
-        // => @media (min-width: 768px) { ... }
+        md: "769px",
+        // => @media (min-width: 769px) { ... }
         xmd: "992px",
         // => @media (min-width: 992px) { ... }
         lg: "1024px",
@@ -42,6 +42,9 @@ module.exports = {
         service: {
           700: withOpacity(" --color-service-text-700"),
           500: withOpacity(" --color-service-text-500"),
+        },
+        border: {
+          700: withOpacity("--color-border-700"),
         },
       },
       maxWidth: {
